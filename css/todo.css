@@ -1,0 +1,215 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "微软雅黑";
+  background: #F5F3F2;
+}
+
+img {
+  border: 0;
+}
+
+input {
+  outline: none;
+}
+
+@font-face {
+  font-family: "iconfont";
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-size: 26px;
+}
+
+#header {
+  height: 1.7rem;
+  background: #668964;
+}
+
+#header .header_1 {
+  padding: 5px 0 0 0;
+}
+
+#header .header_1 img {
+  width: 100%;
+  color: #fff;
+}
+
+#header .nav {
+  width: 100%;
+  height: 1.1rem;
+  overflow: hidden;
+  line-height: 1.1rem;
+  padding: 0 0.3rem;
+}
+
+#header .nav .nav-left {
+  float: left;
+  overflow: hidden;
+  margin-top: 0.1rem;
+  line-height: 0.9rem;
+  color: #fff;
+}
+
+#header .nav .nav-left .yu {
+  float: left;
+  width: 0.9rem;
+  height: 0.9rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #E76663;
+  font-size: 24px;
+}
+
+#header .nav .nav-left span {
+  float: left;
+  margin-left: 0.2rem;
+}
+
+#header .nav .nav-right {
+  float: right;
+}
+
+#header .nav .nav-right .iconfont {
+  color: #fff;
+  float: left;
+  margin-left: 0.2rem;
+}
+
+#header .nav .nav-right .iconfont:nth-of-type(1) {
+  font-size: 30px;
+  margin-top: 0.05rem;
+}
+
+#header .nav .nav-right .iconfont:nth-of-type(2) {
+  font-size: 30px;
+}
+
+#header .nav .nav-right .iconfont:nth-of-type(3) {
+  font-size: 30px;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+}
+
+.div {
+  width: 100%;
+  padding: 0 0.4rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  position: relative;
+  color: #262626;
+}
+
+.div .li-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.div .li-left .iconfont {
+  color: #AEAEAD;
+  margin-right: 0.2rem;
+}
+
+.div .li-right {
+  right: 0.4rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.div:nth-of-type(1) .iconfont {
+  color: #4194DC;
+}
+
+.div:nth-of-type(2) .iconfont {
+  color: #D94134;
+  font-size: 25px;
+}
+
+#add {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: #328AD6;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 50px;
+  color: #fff;
+}
+
+#adds {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  line-height: 1rem;
+  background: #fff;
+  color: #262626;
+  z-index: 1;
+  padding: 0.3rem;
+}
+
+#adds textarea {
+  outline: none;
+  border: 0;
+  border: 0;
+  font-size: 16px;
+  color: #878787;
+}
+
+#adds .biaoqing {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0.3rem;
+  height: 1rem;
+}
+
+#adds .biaoqing span {
+  display: block;
+  float: left;
+}
+
+#adds .biaoqing span:nth-of-type(1) {
+  margin-left: 0.1rem;
+  font-size: 20px;
+}
+
+#adds .biaoqing span:nth-of-type(2) {
+  margin-left: 0.1rem;
+  font-size: 16px;
+}
+
+#adds .biaoqing span:nth-of-type(3) {
+  margin-left: 0.3rem;
+  font-size: 22px;
+}
+
+#adds .biaoqing .wancheng {
+  float: right;
+}
