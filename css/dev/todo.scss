@@ -8,6 +8,7 @@ a{
     text-decoration: none;
 }
 body{
+    font-size: 18px;
     font-family: "微软雅黑";
     background: #F5F3F2;
 }
@@ -44,6 +45,8 @@ input{
         padding: 5px 0 0 0; 
 //      background: #fff;
 //      width: 100%;
+        position: relative;
+        z-index: 100;
         img{
             width: 100%;
             color: #fff;
@@ -102,34 +105,67 @@ input{
     height: auto;
 //  position: relative;
 }
-.div{
+.box li,.div1{
     width: 100%;
     padding: 0 0.4rem;
-    height: 0.9rem;
-    line-height: 0.9rem;
+    height: 1rem;
+    line-height: 1rem;
     position: relative;
     color: #262626;
+    overflow: hidden;
     .li-left{
         @include chuizhi;
+//      overflow: hidden;
         .iconfont{
             color: #AEAEAD;
             margin-right: 0.2rem;
+            float: left;
+        }
+        .a{
+//          display: block;
+            float: left;
+            width: 5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+//          overflow: hidden;
         }
     }
     .li-right{
         right: 0.4rem;
         @include chuizhi;
     }
-}    
-.div:nth-of-type(1){
-    .iconfont{
-        color: #4194DC;
+    .delete{
+        position: absolute;
+//      top: 0.03rem;
+        right: 0.3rem;
+        transition: all .5s;
+//      margin-top: 0.05rem;
     }
 }
-.div:nth-of-type(2){
-    .iconfont{
-        color: #D94134;
-        font-size: 25px;
+.done{
+//  width: 6rem;
+    .li-left{
+        color:#A0A0B4;
+        text-decoration:line-through;
+    }
+    
+    .delete{
+        color: red;
+    }
+}    
+.one{
+    .li-left{
+        .iconfont{
+            color: #4194DC;
+        }
+    }
+}
+.two{
+    .li-left{
+        .iconfont{
+            color: #D94134;
+            font-size: 25px;
+        }
     }
 }
 #add{
@@ -148,9 +184,9 @@ input{
     color: #fff;
 }
 #adds{
-    display: none;
+    opacity: 0;
     position: fixed;
-    bottom: 0;
+    bottom: -6rem;
     left: 0;
     width: 100%;
     height: 6rem;
@@ -159,6 +195,7 @@ input{
     color: #262626;
     z-index: 1;
     padding: 0.3rem;
+    transition: all 1s;
     textarea{
         outline: none;
         border: 0;
@@ -168,7 +205,7 @@ input{
 //      text-align: left;
     }
     .biaoqing{
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
@@ -196,6 +233,84 @@ input{
         }
     }
 }
+.cenav{
+    opacity: 0;
+    position: fixed;
+    left: -6rem;
+    top: 0;
+    height: 100%;
+    width: 6rem;
+    background: rgb(222,222,222);
+    z-index: 10;
+    padding: 0.3rem;
+    transition: all 1s;
+    .touxiang{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+//      background: blue;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        img{
+            width: 100%;
+            border-radius:50% ;
+        }
+    }
+    .all,.completed,.remind,.clearall{
+        width: 100%;
+        height: 0.8rem;
+        text-align: left;
+        line-height: 0.8rem;
+        color: #262626;
+        margin-top: 0.4rem;
+        position: relative;
+        font-size: 20px;
+        border-bottom: 1px solid #AEAEAD;
+    }
+    .active{
+        color: red;
+    }
+    .shezhi{
+        position: absolute;
+        bottom: 0;
+        left: 0.3rem;
+        height: 1rem;
+        line-height: 1rem;
+        width: 100%;
+        font-size: 18px;
+        span{
+            float: left;
+        }
+        .iconfont{
+            margin-right: 0.1rem;
+        }
+        .back{
+            float: right;
+            margin-right: 0.6rem;
+        }
+    }
+}
+.ani-delete{
+    animation: delete .8s;
+}
+@keyframes delete{
+    0%{
+        transform:scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
