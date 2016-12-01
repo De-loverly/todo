@@ -44,7 +44,6 @@ $(function(){
 			if(up-down>50){			
 				todos[$(this).index()].state=1;
 				$(this).addClass("done");
-				$(this).find(".a").wrapInner("<s></s>")
 			}
 			if(up-down<-50){
 				todos[$(this).index()].state=0;
